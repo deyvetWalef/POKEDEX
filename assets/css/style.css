@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  top: 28px;
+  left: 46px;
+}
+
+#home {
+  display: inline-block;
+  background: orangered;
+  color: white;
+  align-self: flex-start;
+  padding: 18px 18px;
+}
+
+#criar {
+  display: inline-block;
+  background: orangered;
+  color: white;
+  align-self: flex-start;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+#editar {
+  display: inline-block;
+  background: orangered;
+  color: white;
+  align-self: flex-start;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+#deletar {
+  display: inline-block;
+  background: orangered;
+  color: white;
+  align-self: flex-start;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+.main {
+  height: 931px;
+  width: 1350px;
+  background: url("/assets/img/background.jpg");
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+  top: 28px;
+  left: 46px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card {
+  position: relative;
+  padding: 10px;
+  width: 300px;
+  background-color: #f6f6f6;
+  margin: 20px;
+  border: 1px solid black;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .card img {
+  transition: 0.5s;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card h2 {
+  font-size: 2rem;
+}
+
+.container .card .content {
+  padding: 20px;
+  text-align: left;
+}
+
+.container .card .content p {
+  color: #666;
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  background-color: rgb(254, 225, 0);
+  color: white;
+  margin-top: -30px;
+  box-shadow: 10px 10px 2px orangered;
+  border-color: rgb(254, 225, 0);
+}
+
+.main h1 {
+  font-size: 36px;
+}
+
+.gradient {
+  background: rgba(0, 0, 0, 0.65);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0.85) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer {
+  background: black;
+  padding: 4rem 0 2rem 0;
+  border-top: 9px solid #222;
+  text-align: center;
+  display: grid;
+}

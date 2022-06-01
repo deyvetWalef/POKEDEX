@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Projeto de Pokedex",
+  "main": "script.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Deyvet Walef",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deyvetWalef/POKEDEX.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deyvetWalef/POKEDEX/issues"
+  },
+  "homepage": "https://github.com/deyvetWalef/POKEDEX#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
