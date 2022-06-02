@@ -60,7 +60,7 @@ body {
 .main {
   height: 931px;
   width: 1350px;
-  background: url("/assets/img/background.jpg");
+  background: url("/public/img/background.jpg");
   display: flex;
   background-repeat: no-repeat;
   background-size: 100% 100%;

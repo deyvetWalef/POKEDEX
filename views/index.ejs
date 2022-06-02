@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <img src="/assets/img/logo.png" alt="logo" draggable="false" />
+      <img src="/public/img/logo.png" alt="logo" draggable="false" />
       <button id="home">HOME</button>
       <button id="criar">CRIAR</button>
       <button id="editar">EDITAR</button>
@@ -26,11 +26,11 @@
           </div>
           <h2><%=pokemon.nome%></h2>
           <div class="content">
-            <p><%=pokemon.descricao %></p>
-            <p><%=pokemon.tipo %></p>
-            <p><%=pokemon.altura %></p>
-            <p><%=pokemon.peso %></p>
-            <p><%=pokemon.habilidade %></p>
+            <p>Descrição: <%=pokemon.descricao %></p>
+            <p>Tipo: <%=pokemon.tipo %></p>
+            <p>Altura: <%=pokemon.altura %>m</p>
+            <p>Peso: <%=pokemon.peso %>kg</p>
+            <p>Habilidade: <%=pokemon.habilidade %></p>
           </div>
         </div>
         <%})%>
