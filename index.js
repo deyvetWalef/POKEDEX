@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -73,12 +74,12 @@ app.post("/update/:id", (req, res) => {
 
   const newPokemon = req.body;
 
-  newPokemon.id=id+1;
-  pokedex[id]=newPokemon;
+  newPokemon.id = id + 1;
+  pokedex[id] = newPokemon;
   pokemon = undefined;
   res.redirect("/");
 });
 
-app.listen(3000, () =>
-  console.log("Servidor rodando em https://localhost :3000")
+app.listen(port, () =>
+  console.log("Servidor rodando em https://localhost :${port}")
 );
