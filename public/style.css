@@ -7,8 +7,15 @@
 }
 
 body {
+  display: flex;
+  position: relative;
   font-family: sans-serif;
+  display: flex; /*para ficar responsivo*/
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
   color: white;
+  background-color: rgb(12, 12, 11);
 }
 
 .header {
@@ -58,10 +65,11 @@ body {
 }
 
 .main {
+  padding: 5rem 10rem 2rem 10rem;
+  height: 100vh; /*para corrigir os problemas de margens e bordas*/
   height: 931px;
   width: 1350px;
   background: url("/public/img/background.jpg");
-  display: flex;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: black;
@@ -71,6 +79,8 @@ body {
 }
 
 .container {
+  flex-wrap: wrap;
+  position: relative;
   z-index: 1;
   width: 100%;
   display: flex;
@@ -142,10 +152,47 @@ body {
   bottom: 0;
 }
 
-.footer {
-  background: black;
-  padding: 4rem 0 2rem 0;
-  border-top: 9px solid #222;
+.box {
+  position: relative;
+  top: 215px;
+  justify-content: center;
   text-align: center;
-  display: grid;
+  justify-items: center;
+  flex-wrap: wrap;
+  padding: -10rem;
+  background-color: orangered;
 }
+
+fieldset {
+  border: 3px solid rgb(254, 225, 0);
+}
+
+legend {
+  border: 1px solid rgb(254, 225, 0);
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(254, 225, 0);
+  border-radius: 8px;
+}
+
+.inputBox {
+  position: relative;
+}
+
+#btnCadastrar{
+  justify-items: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(254, 225, 0);
+  border: 1px solid rgb(254, 225, 0);
+  border-radius: 50px;
+  cursor: pointer;
+  color: black;
+  transition: 0.5s;
+}
+
+#btnCadastrar:hover{
+  background-color: white;
+  color: black;
+}
+

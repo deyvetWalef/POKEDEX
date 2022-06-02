@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Pokedex</title>
   </head>
 
   <body>
     <header class="header">
       <img src="/public/img/logo.png" alt="logo" draggable="false" />
-      <button id="home">HOME</button>
-      <button id="criar">CRIAR</button>
-      <button id="editar">EDITAR</button>
-      <button id="deletar">DELETAR</button>
+      <button id="home" type="submit">HOME</button>
+      <button id="criar" type="submit">CRIAR</button>
+      <button id="editar" type="submit">EDITAR</button>
+      <button id="deletar" type="submit">DELETAR</button>
     </header>
     <main class="main">
       <div class="container">
-
         <% pokedex.forEach((pokemon)=>{%>
         <div class="card">
           <div class="img">
@@ -37,10 +36,39 @@
       </div>
 
       <div class="gradient"></div>
-    </main>
-    <footer class="footer">
-      <p class="info">Deyvet Walef. Todos os direitos reservados</p>
-    </footer>
 
+      <section class="box">
+        <form action="/add" method="POST">
+          <fieldset>
+            <legend><b>CADASTRAR POKÉMON</b></legend>
+            <br /><br />
+            <div class="inputBox">
+              <label for="nome">Nome: </label>
+              <input type="text" id="nome" name="nome" />
+              <br /><br />
+              <label for="descricao">Descrição: </label>
+              <input type="text" id="descricao" name="descricao" />
+              <br /><br />
+              <label for="tipo">Tipo: </label>
+              <input type="text" id="tipo" name="tipo" />
+              <br /><br />
+              <label for="altura">Altura(m): </label>
+              <input type="text" id="altura" name="altura" />
+              <br /><br />
+              <label for="peso">Peso(kg): </label>
+              <input type="text" id="peso" name="peso" />
+              <br /><br />
+              <label for="habilidade">Habilidade: </label>
+              <input type="text" id="habilidade" name="habilidade" />
+              <br /><br />
+              <label for="imagem">Link da Imagem: </label>
+              <input type="text" id="imagem" name="imagem" />
+              <br /><br />
+              <button id="btnCadastrar" type="submit">CADASTRAR</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
