@@ -69,7 +69,7 @@ body {
   height: 100vh; /*para corrigir os problemas de margens e bordas*/
   height: 931px;
   width: 1350px;
-  background: url("/public/img/background.jpg");
+  background: url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: black;

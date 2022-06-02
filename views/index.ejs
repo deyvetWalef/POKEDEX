@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <img src="/public/img/logo.png" alt="logo" draggable="false" />
+      <img src="img/logo.png" alt="logo" draggable="false" />
       <button id="home" type="submit">HOME</button>
       <button id="criar" type="submit">CRIAR</button>
       <button id="editar" type="submit">EDITAR</button>
@@ -30,6 +30,8 @@
             <p>Altura: <%=pokemon.altura %>m</p>
             <p>Peso: <%=pokemon.peso %>kg</p>
             <p>Habilidade: <%=pokemon.habilidade %></p>
+            <p><%=pokemon.id %></p>
+            <a href="/detalhes/<%=pokemon.id %>">EDITAR</a>
           </div>
         </div>
         <%})%>
@@ -38,6 +40,7 @@
       <div class="gradient"></div>
 
       <section class="box">
+        <% if (pokemon == undefined){%>
         <form action="/add" method="POST">
           <fieldset>
             <legend><b>CADASTRAR POKÉMON</b></legend>
@@ -50,7 +53,7 @@
               <input type="text" id="descricao" name="descricao" />
               <br /><br />
               <label for="tipo">Tipo: </label>
-              <input type="text" id="tipo" name="tipo" />
+              <input type="text" id="tipo" />
               <br /><br />
               <label for="altura">Altura(m): </label>
               <input type="text" id="altura" name="altura" />
@@ -68,6 +71,74 @@
             </div>
           </fieldset>
         </form>
+        <%}else{%>
+
+        <form action="/update/<%=pokemon.id%>" method="POST">
+          <fieldset>
+            <legend><b>EDITAR POKÉMON</b></legend>
+            <br /><br />
+            <div class="inputBox">
+              <label for="nome">Nome: </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                value="<%=pokemon.nome%>"
+              />
+              <br /><br />
+              <label for="descricao">Descrição: </label>
+              <input
+                type="text"
+                id="descricao"
+                name="descricao"
+                value="<%=pokemon.descricao%>"
+              />
+              <br /><br />
+              <label for="tipo">Tipo: </label>
+              <input
+                type="text"
+                id="tipo"
+                name="tipo"
+                value="<%=pokemon.tipo%>"
+              />
+              <br /><br />
+              <label for="altura">Altura(m): </label>
+              <input
+                type="text"
+                id="altura"
+                name="altura"
+                value="<%=pokemon.altura%>"
+              />
+              <br /><br />
+              <label for="peso">Peso(kg): </label>
+              <input
+                type="text"
+                id="peso"
+                name="peso"
+                value="<%=pokemon.peso%>"
+              />
+              <br /><br />
+              <label for="habilidade">Habilidade: </label>
+              <input
+                type="text"
+                id="habilidade"
+                name="habilidade"
+                value="<%=pokemon.habilidade%>"
+              />
+              <br /><br />
+              <label for="imagem">Link da Imagem: </label>
+              <input
+                type="text"
+                id="imagem"
+                name="imagem"
+                value="<%=pokemon.imagem%>"
+              />
+              <br /><br />
+              <button id="btnCadastrar" type="submit">ATUALIZAR</button>
+            </div>
+          </fieldset>
+        </form>
+        <%}%>
       </section>
     </main>
   </body>
